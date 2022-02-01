@@ -22,7 +22,7 @@
     "popper.js": "^1.16.1"
   },
   "description": "COMP229 Assignment1",
-  "main": "index.js",
+  "main": "routes/index.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
