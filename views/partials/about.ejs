@@ -1,0 +1,29 @@
+<!-- About me Content -->
+<% if (title == 'About me') { %>
+<div class="container">
+<style>
+
+<!-- add table format -->
+
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+</style>
+<section>
+<img src="/Assets/images/headshot.png" alt="logo"  width="250" height="220">
+<article>
+<div class="container-fluid">
+<h4><b>Adrian B. Posadas</b></h4>
+<p><b>Education</b><br>2007-2011: Balchelor of Science Major in Electronics Engineering<br>2022: Advanced Diploma in Software Engineering Technology - Artificial Intelligence.</p>
+<p><b>Hobbies and Interest</b><br>Sports: Football, Ultimate Frisbee, Basketball<br>Playing Video Games.</p>
+<p><a href="/Content/AdrianPosadas Resume_2021_CA.pdf">Click here to see my Resume</a></p>
+</article>
+</section>
+<% } else  { %>
+<% } %> 
