@@ -4,11 +4,98 @@
 
 <!-- Main Content -->
 <main class="container"> 
-  <div class="jumbotron">
-    <h1 class="display-4">Welcome to the qqq <%= title %> page </h1>
-
+   <div class="container-fluid">
+    <h1 style = "text-align:center" class="display-6 p-4 mb-4 bg-secondary text-grey "> <b> <%= title %> </b></h1>
+    
   </div>
 </main>
+<% if (title == 'Home') { %>  
+<div class="container">
+<h2>Welcome to my Portfolio</h2>
+<p><i>My Mission is to provide software solutions to any problem</i></p>
+<hr>
+<h4><a href="/About">Want to know more about me?</a></h4>
+<hr>
+<h4><a href="/Projects">Projects</a></h4>
+<hr>
+<h4><a href="/Services">Services Offered</a></h4>
+<hr>
+<h4><a href="/Contact">Contact Me</a></h4>
+<hr>
+
+<% } else  { %>
+<% } %> 
+
+<% if (title == 'About me') { %>
+<div class="container">
+<style>
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+</style>
+<section>
+<img src="/Assets/images/headshot.png" alt="logo"  width="250" height="200">
+<article>
+<div class="container-fluid">
+<h4><b>Adrian B. Posadas</b></h4>
+<p><b>Education</b><br>2007-2011: Balchelor of Science Major in Electronics Engineering<br>2022: Advanced Diploma in Software Engineering Technology - Artificial Intelligence.</p>
+<p><b>Hobbies and Interest</b><br>Sports: Football, Ultimate Frisbee, Basketball<br>Playing Video Games.</p>
+<p><a href="/Content/AdrianPosadas Resume_2021_CA.pdf">Click here to see my Resume</a></p>
+</article>
+</section>
+<% } else  { %>
+<% } %> 
+
+<% if (title == 'Projects') { %>  
+<div class="container">
+<style>
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+</style>
+<section>
+<p><img src="/Assets/images/motor.jpg" alt="motor"  width="250" height="200">
+<br><img src="/Assets/images/pwm.png" alt="pwm"  width="250" height="200">
+</p>
+
+<article>
+<div class="container-fluid">
+<h4><b>POWER CONTROL FOR CONTINUOUS DUTY AC MOTORS <br>USING PULSE WITH MODULATION</b></h4>
+<p>Using a PIC Microcontroller’s Pulse Width Modulation function,<br>I made a program that controls a continuous AC motor’s speed <br> and thus controlling the power consumption of the motor</p>
+
+</article>
+</section>
+
+<% } else  { %>
+<% } %> 
+
+<% if (title == 'Services') { %>  
+<div class="container">
+<h3>What Sevices do I Offer?</h3>
+<p>I provide services on General Programming, Web Development, and Artificial Intelligence</p>
+<hr>
+<h3>What Programming Languages?</h3>
+<p>Python<br> Java<br> Javascript<br></p>
+<img src="/Assets/images/java.png" alt="java"  width="250" height="200">
+<img src="/Assets/images/js.png" alt="javascript"  width="250" height="200">
+<img src="/Assets/images/python.png" alt="python"  width="250" height="200">
+<hr>
+
+
+<% } else  { %>
+<% } %> 
 
 <%- include partials/bottom_nav.ejs %>
 
