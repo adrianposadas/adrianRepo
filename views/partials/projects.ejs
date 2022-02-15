@@ -1,0 +1,43 @@
+<!-- Projects Content -->
+<% if (title == 'Projects') { %>  
+<div class="container">
+
+<!--flexbox layout-->
+<style>
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+</style>
+<section>
+<p><img src="/Assets/images/motor.jpg" alt="motor"  width="150" height="100">
+<br><img src="/Assets/images/pwm.png" alt="pwm"  width="150" height="100">
+</p>
+
+<article>
+<div class="container-fluid">
+<h4><b>POWER CONTROL FOR CONTINUOUS DUTY AC MOTORS <br>USING PULSE WITH MODULATION</b></h4>
+<p>Using a PIC Microcontroller’s Pulse Width Modulation function,<br>I made a program that controls a continuous AC motor’s speed <br> and thus controlling the power consumption of the motor</p>
+</article>
+</section>
+
+<section>
+<p><img src="/Assets/images/temp.jpeg" alt="temp"  width="150" height="100">
+<br><img src="/Assets/images/qrscan.jpg" alt="qr"  width="150" height="100">
+</p>
+
+<article>
+<div class="container-fluid">
+<h4><b>HEALTH MONITORING SURVEY FORM <br>AND CONTACT TRACING SYSTEM</b></h4>
+<p>This systems upload your contact info and vaccination status to a cloud.<br>When entering establishments, scanning a qr code will provide your info. <br> As a result, contact tracing process will be faster and smoother</p>
+<p> Currently, this project is still under developent</p>
+</article>
+</section>
+
+<% } else  { %>
+<% } %>
