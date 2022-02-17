@@ -8,7 +8,7 @@ server.js
  * Module dependencies.
  */
 
-var app = require('./app');
+var app = require('./server/config/app');
 var debug = require('debug')('portfolio:server');
 var http = require('http');
 

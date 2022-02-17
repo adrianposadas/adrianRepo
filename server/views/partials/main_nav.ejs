@@ -45,20 +45,21 @@
       <% } %>
         </li>
 
-      <% if (title == "Books") { %>
-        <li class="nav-item active">
+      <% if (title == "Contact List") { %>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/contacts-list"><i class="fas fa-mobile-alt"></i> Contact List</a>
         <% } else  { %>
         <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/book-list"><i class="fas fa-mobile-alt"></i> Books </a>
+          <a class="nav-link" href="/contacts-list"><i class="fas fa-mobile-alt"></i> Contact List </a>
         </li>
 
        <% if (title == 'Contact') { %> 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/contact"><i class="fas fa-mobile-alt"></i> Contact</a>
+          <a class="nav-link active" aria-current="page" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me</a>
       <% } else { %>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/contact"><i class="fas fa-mobile-alt"></i> Contact</a>
+          <a class="nav-link" aria-current="page" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me</a>
       <% } %>
         </li>
      
