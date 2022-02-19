@@ -54,7 +54,7 @@
           <a class="nav-link" href="/contacts-list"><i class="fas fa-folder-open"></i> Contact List </a>
         </li>
 
-       <% if (title == 'Contact') { %> 
+      <% if (title == 'Contact') { %> 
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me</a>
       <% } else { %>
@@ -62,7 +62,14 @@
           <a class="nav-link" aria-current="page" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Me</a>
       <% } %>
         </li>
-     
+
+      <% if (typeof displayName == 'string' && displayName) { %> 
+        <li class="nav-item"><a href="/logout" class="nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        <li class="navbar-text"><i class="fas fa-user"></i>Welcome, <%= displayName %></li>
+      <% } else { %>
+        <li class="nav-item"><a href="/login" class="nav-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+      <% } %>
+        
     </div>
   </div>
 </nav>

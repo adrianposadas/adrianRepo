@@ -13,15 +13,13 @@ module.exports.displayContactsList = (req, res, next) => {
         }
         else
         {
-            //console.log(contactList);
-
-            res.render('business_contacts/list', {title: 'Contacts List', ContactsList: contactsList})            
+            res.render('business_contacts/list', {title: 'Contacts List', ContactsList: contactsList, displayName: req.user ? req.user.displayName : ''})            
         }
     });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('business_contacts/add', {title: 'Add Contact'})  
+    res.render('business_contacts/add', {title: 'Add Contact', displayName: req.user ? req.user.displayName : ''})  
 
 }
 
@@ -59,7 +57,7 @@ module.exports.displayEditPage = (req, res, next) => {
         else
         {
             // show the edit view
-            res.render('business_contacts/edit', {title: 'Edit Contact', contacts: contactToEdit})
+            res.render('business_contacts/edit', {title: 'Edit Contact', contacts: contactToEdit, displayName: req.user ? req.user.displayName : ''})
         }
     });
 }
