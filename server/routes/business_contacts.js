@@ -1,3 +1,9 @@
+/*Adrian Posadas
+301220353
+02/19/2022
+business_contacts.js
+*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -17,7 +23,7 @@ function requireAuth(req, res, next)
 }
 
 /* GET Route for the Contacts List page - READ OPeration */
-router.get('/', contactsController.displayContactsList);
+router.get('/',requireAuth, contactsController.displayContactsList);
 
 /* GET Route for displaying the Add page - CREATE OPeration */
 router.get('/add', requireAuth, contactsController.displayAddPage);

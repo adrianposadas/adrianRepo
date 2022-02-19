@@ -1,3 +1,9 @@
+/*Adrian Posadas
+301220353
+02/19/2022
+business_contacts.js
+*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -13,7 +19,7 @@ module.exports.displayContactsList = (req, res, next) => {
         }
         else
         {
-            res.render('business_contacts/list', {title: 'Contacts List', ContactsList: contactsList, displayName: req.user ? req.user.displayName : ''})            
+            res.render('business_contacts/list', {title: 'Business Contacts List', ContactsList: contactsList, displayName: req.user ? req.user.displayName : ''})            
         }
     });
 }

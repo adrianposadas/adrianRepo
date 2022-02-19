@@ -1,3 +1,9 @@
+/*Adrian Posadas
+301220353
+02/19/2022
+users.js
+*/
+
 // require modules for the User Model
 let mongoose = require('mongoose');
 let plm = require('passport-local-mongoose');
