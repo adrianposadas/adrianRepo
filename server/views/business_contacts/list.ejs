@@ -18,7 +18,7 @@
                 <!-- Header Row-->
                 <tr class="d-flex">
                     <th class="text-center col-3">Name</th>
-                    <th class="text-center col-1">Contact Number</th>
+                    <th class="text-center col-2">Contact Number</th>
                     <th class="text-center col-4">Email Address</th>
                 <% if (typeof displayName == 'string' && displayName) { %> 
                     <th class="text-center col-2"></th>
@@ -31,7 +31,7 @@
                 <% for(let count = 0; count < ContactsList.length; count++) { %>
                     <tr class="d-flex">
                         <td class="text-center col-3"><%= ContactsList[count].contact_name %></td>
-                        <td class="text-center col-1"><%= ContactsList[count].contact_number %></td>
+                        <td class="text-center col-2"><%= ContactsList[count].contact_number %></td>
                         <td class="text-center col-4"><%= ContactsList[count].email_address %></td>
                         <% if (typeof displayName == 'string' && displayName) { %> 
                             <td class="text-center col-2">
